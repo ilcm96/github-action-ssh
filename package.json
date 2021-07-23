@@ -1,0 +1,32 @@
+{
+  "name": "@ilcm96/github-action-ssh",
+  "version": "1.0.0",
+  "description": "Run commands on a remote server via SSH.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilcm96/github-action-ssh"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write **/*.ts",
+    "format-check": "prettier --check **/*.ts",
+    "pack": "ncc build"
+  },
+  "bin": {
+    "github-action-ssh": "dist/index.js"
+  },
+  "author": "Yun Seongmin",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.4.0",
+    "node-ssh": "^12.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.12",
+    "@types/ssh2":"^0.5.47",
+    "@vercel/ncc": "^0.29.0",
+    "prettier": "^2.3.2",
+    "typescript": "4.3.5"
+  }
+}
